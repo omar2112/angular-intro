@@ -44,6 +44,7 @@
                                 <th ng-click ="sortBy('title')" ng-class="(sorted: isSortedBy('title)}">Title</th>
                                 <th ng-click ="sortBy('grossSales')">Sales</th>
                                 <th ng-click ="sortBy('ticketsSold')">Tickets</th>
+                                <th ng-click ="sortBy('ReleaseDate')">Release Date</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -52,6 +53,7 @@
                                     <td>{{movie.title}}</td>
                                     <td>{{movie.grossSales | currency : '$' : 0}}</td>
                                     <td>{{movie.ticketsSold | number}}</td>
+                                    <td>{{movie.releaseDate | date : "shortDate"}}</td>
                             </tr>
                         </tbody>
 
